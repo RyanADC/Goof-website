@@ -1,5 +1,24 @@
 <script lang="ts">
-  // Hardcoded header: no CMS-driven nav
+  import { onMount } from 'svelte';
+
+  let menuOpen = false;
+
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+  }
+
+  function closeMenu() {
+    menuOpen = false;
+  }
+
+  // Close menu on escape key
+  onMount(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') menuOpen = false;
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  });
 </script>
 
 <header class="header">
@@ -14,7 +33,27 @@
       </nav>
 
       <a href="/contact" class="cta">let's goof</a>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" on:click={toggleMenu} aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
+
+    <!-- Mobile menu -->
+    {#if menuOpen}
+      <div class="mobile-menu" on:click={closeMenu}>
+        <nav class="mobile-nav">
+          <a href="/werk" on:click={closeMenu}>werk</a>
+          <a href="/diensten" on:click={closeMenu}>diensten</a>
+          <a href="/over" on:click={closeMenu}>over</a>
+          <a href="/contact" on:click={closeMenu}>contact</a>
+          <a href="/contact" class="mobile-cta" on:click={closeMenu}>let's goof</a>
+        </nav>
+      </div>
+    {/if}
 </header>
 
 <style>
@@ -78,10 +117,104 @@
   }
   .cta:hover { filter: brightness(1.05); }
 
+  /* Mobile menu button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    justify-self: end;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #4A5B4C;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 300px;
+    background: #4A5B4C;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideIn 0.3s ease;
+  }
+
+  .mobile-nav a {
+    color: #FDFF96;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    padding: 0.5rem 0;
+  }
+
+  .mobile-nav a:hover {
+    opacity: 0.8;
+  }
+
+  .mobile-cta {
+    background: #FDFF96;
+    color: #4A5B4C !important;
+    padding: 1rem 2rem !important;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700 !important;
+    margin-top: auto;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+
   /* Responsive behavior */
   @media (max-width: 900px) {
-    .shell { grid-template-columns: 1fr auto; row-gap: .6rem; }
-    .navpill { grid-column: 1 / -1; justify-self: center; gap: 1.4rem; padding: .7rem 1rem; }
-    .cta { padding: .75rem 1rem; }
+    .shell {
+      grid-template-columns: 1fr auto;
+      padding: 1rem clamp(10px, 2vw, 20px);
+    }
+
+    .brand {
+      font-size: 1.8rem;
+    }
+
+    .navpill,
+    .cta {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
   }
 </style>
