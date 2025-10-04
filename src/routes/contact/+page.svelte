@@ -74,10 +74,10 @@
 
 <style>
 	.contact-page {
-		background: #4A5B4C;
+		background: #4a5b4c;
 	}
 
-    .container-hero {
+	.container-hero {
 		width: 100%;
 		max-width: 1400px;
 		margin: 0 auto;
@@ -91,8 +91,8 @@
 
 	/* Hero Section */
 	.contact-hero {
-		background: #4A5B4C;
-		color: #FDFF96;
+		background: #4a5b4c;
+		color: #fdff96;
 		padding: clamp(3rem, 6vw, 6rem) 0 clamp(3rem, 5vw, 5rem);
 	}
 
@@ -101,14 +101,14 @@
 		font-weight: 500;
 		margin-bottom: 1rem;
 		text-transform: lowercase;
-		color: #FDFF96;
+		color: #fdff96;
 	}
 
 	.subtitle {
 		font-size: clamp(1.2rem, 2vw, 1.8rem);
 		font-weight: 400;
 		margin-bottom: clamp(2rem, 4vw, 4rem);
-		color: #FDFF96;
+		color: #fdff96;
 	}
 
 	.hero-content {
@@ -133,14 +133,14 @@
 	.info-item .label {
 		font-size: clamp(0.95rem, 1.2vw, 1.1rem);
 		font-weight: 400;
-		color: #FDFF96;
+		color: #fdff96;
 		text-transform: lowercase;
 	}
 
 	.info-item .value {
 		font-size: clamp(1rem, 1.3vw, 1.2rem);
 		font-weight: 300;
-		color: #FDFF96;
+		color: #fdff96;
 		text-decoration: none;
 	}
 
@@ -156,7 +156,7 @@
 		display: block;
 		font-size: clamp(1rem, 1.3vw, 1.2rem);
 		font-weight: 500;
-		color: #FDFF96;
+		color: #fdff96;
 		margin-bottom: 0.5rem;
 		text-transform: lowercase;
 	}
@@ -164,7 +164,7 @@
 	.boring-stuff p {
 		font-size: clamp(0.9rem, 1.1vw, 1rem);
 		font-weight: 300;
-		color: #FDFF96;
+		color: #fdff96;
 		margin: 0.25rem 0;
 	}
 
@@ -181,11 +181,10 @@
 		align-items: start;
 	}
 
-
 	.form-intro h2 {
 		font-size: clamp(1.8rem, 3vw, 2.5rem);
 		font-weight: 1000;
-		color: #4A5B4C;
+		color: #4a5b4c;
 		margin-bottom: 1rem;
 		text-transform: lowercase;
 	}
@@ -193,11 +192,11 @@
 	.form-intro p {
 		font-size: clamp(1rem, 1.3vw, 1.2rem);
 		font-weight: 600;
-		color: #4A5B4C;
+		color: #4a5b4c;
 	}
 
 	.contact-form {
-		background: #FDFF96;
+		background: #fdff96;
 		padding: clamp(2rem, 4vw, 3rem);
 		border-radius: 20px;
 		max-width: 100%;
@@ -219,10 +218,10 @@
 	.contact-form textarea {
 		width: 100%;
 		padding: 1rem 1.5rem;
-		border: 2px solid #4A5B4C;
+		border: 2px solid #4a5b4c;
 		border-radius: 12px;
-		background: #FDFF96;
-		color: #4A5B4C;
+		background: #fdff96;
+		color: #4a5b4c;
 		font-size: clamp(0.95rem, 1.1vw, 1.05rem);
 		font-family: inherit;
 		font-weight: 400;
@@ -233,7 +232,7 @@
 
 	.contact-form input::placeholder,
 	.contact-form textarea::placeholder {
-		color: #4A5B4C;
+		color: #4a5b4c;
 		opacity: 0.7;
 		text-transform: lowercase;
 	}
@@ -252,9 +251,9 @@
 	.submit-btn {
 		width: 100%;
 		padding: 1.2rem 2rem;
-		background: #4A5B4C;
-		color: #FDFF96;
-		border: 2px solid #4A5B4C;
+		background: #4a5b4c;
+		color: #fdff96;
+		border: 2px solid #4a5b4c;
 		border-radius: 12px;
 		font-size: clamp(1rem, 1.2vw, 1.1rem);
 		font-weight: 600;
@@ -289,9 +288,10 @@
 	}
 
 	@media (max-width: 480px) {
-        .container-hero {
-            padding: 0 1rem;
-        }
+		.container-hero {
+			padding: 0 1rem;
+			width: 90%;
+		}
 
 		.contact-hero {
 			padding: 2.5rem 0 2rem;
@@ -337,7 +337,7 @@
 
 		.form-intro {
 			margin-bottom: 0.5rem;
-            padding: 0 1rem;
+			padding: 0 1rem;
 		}
 
 		.form-intro h2 {
