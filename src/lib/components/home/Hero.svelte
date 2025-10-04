@@ -95,4 +95,10 @@
       margin-left: 0;
     }
   }
+
+  @media (max-width: 480px) {
+    .hero__grid {
+      padding-inline: 1rem;
+    }
+  }
 </style>

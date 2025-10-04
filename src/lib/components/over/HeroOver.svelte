@@ -69,6 +69,7 @@
   .step {
     display: inline-block;
     position: relative;
+    background: #E0B20A;
     margin-left: calc(var(--i) * var(--step));
     padding: 0.12em 0.25em;
   }
@@ -92,6 +93,12 @@
     }
     .step {
       margin-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__grid {
+      padding-inline: 1rem;
     }
   }
 </style>

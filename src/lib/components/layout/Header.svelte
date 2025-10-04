@@ -88,8 +88,8 @@
     justify-self: center;
     display: inline-flex;
     align-items: center;
-    gap: clamp(1rem, 2.9rem, 2.9rem);
-    padding: clamp(0.7rem, 1.2rem, 1.2rem) clamp(1rem, 3rem, 3rem);
+    gap: clamp(1.5rem, 2.5rem, 2.5rem);
+    padding: clamp(0.5rem, 0.75rem, 0.75rem) clamp(1.5rem, 2.5rem, 2.5rem);
     border-radius: 9999px;
     border: 2px solid #4A5B4C;
     background: transparent;

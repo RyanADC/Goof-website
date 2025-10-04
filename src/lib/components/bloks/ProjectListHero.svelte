@@ -99,6 +99,12 @@
 		}
 	}
 
+	@media (max-width: 480px) {
+		.container {
+			padding: 0 1rem;
+		}
+	}
+
 	.card.proj {
 		display: block;
 		background: #efe9e6; /* zachte kaartkleur zoals je voorbeeld */
@@ -135,10 +141,13 @@
 	}
 	.proj__title {
 		margin: 0.25rem 0 0.35rem;
+		font-size: clamp(1.2rem, 2vw, 1.5rem);
+		font-weight: 500;
 	}
 	.proj__intro {
 		margin: 0;
 		opacity: 0.8;
+		font-size: clamp(0.9rem, 1.2vw, 1rem);
 	}
 
 	.muted {
