@@ -1,0 +1,282 @@
+<script lang="ts">
+	import HeaderInverse from '$lib/components/layout/HeaderInverse.svelte';
+	import FooterInverse from '$lib/components/layout/FooterInverse.svelte';
+</script>
+
+<svelte:head>
+	<title>Contact - Goof</title>
+</svelte:head>
+
+<HeaderInverse />
+
+<main class="contact-page">
+	<!-- Hero Section -->
+	<section class="contact-hero">
+		<div class="container">
+			<h1>kennismaken?</h1>
+			<p class="subtitle">leuk! neem contact op en we plannen een gesprek.</p>
+
+			<div class="hero-content">
+				<div class="contact-info">
+					<div class="info-item">
+						<span class="label">mailen</span>
+						<a href="mailto:info@goof.design" class="value">info@goof.design</a>
+					</div>
+
+					<div class="info-item">
+						<span class="label">bellen</span>
+						<a href="tel:+31624576082" class="value">+31 6 24576082</a>
+					</div>
+				</div>
+
+				<div class="boring-stuff">
+					<span class="boring-label">boring stuff</span>
+					<p>KVK: XXXXXXXXXX</p>
+					<p>BTW: XXXXXXXXXX</p>
+					<p>IBAN: XXXXXXXXXX</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Form Section -->
+	<section class="contact-form-section">
+		<div class="container">
+			<div class="form-wrapper">
+				<div class="form-intro">
+					<h2>of stuur een bericht via het formulier</h2>
+					<p>en ik neem zo snel mogelijk contact met je op!</p>
+				</div>
+
+				<form class="contact-form" method="POST">
+					<div class="form-row">
+						<input type="text" name="naam" placeholder="naam" required />
+						<input type="text" name="achternaam" placeholder="achternaam" required />
+					</div>
+
+					<div class="form-row">
+						<input type="tel" name="telefoon" placeholder="telefoon" required />
+						<input type="email" name="e-mail" placeholder="e-mail" required />
+					</div>
+
+					<div class="form-group">
+						<textarea name="bericht" placeholder="bericht" rows="8" required></textarea>
+					</div>
+
+					<button type="submit" class="submit-btn">bericht verzenden</button>
+				</form>
+			</div>
+		</div>
+	</section>
+</main>
+
+<FooterInverse />
+
+<style>
+	.contact-page {
+		background: #4A5B4C;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 clamp(10px, 2vw, 20px);
+	}
+
+	/* Hero Section */
+	.contact-hero {
+		background: #4A5B4C;
+		color: #FDFF96;
+		padding: clamp(3rem, 6vw, 6rem) 0 clamp(3rem, 5vw, 5rem);
+	}
+
+	.contact-hero h1 {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 500;
+		margin-bottom: 1rem;
+		text-transform: lowercase;
+		color: #FDFF96;
+	}
+
+	.subtitle {
+		font-size: clamp(1.2rem, 2vw, 1.8rem);
+		font-weight: 400;
+		margin-bottom: clamp(2rem, 4vw, 4rem);
+		color: #FDFF96;
+	}
+
+	.hero-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: clamp(2rem, 4vw, 4rem);
+	}
+
+	.contact-info {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.info-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.info-item .label {
+		font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+		font-weight: 400;
+		color: #FDFF96;
+		text-transform: lowercase;
+	}
+
+	.info-item .value {
+		font-size: clamp(1rem, 1.3vw, 1.2rem);
+		font-weight: 300;
+		color: #FDFF96;
+		text-decoration: none;
+	}
+
+	.info-item .value:hover {
+		text-decoration: underline;
+	}
+
+	.boring-stuff {
+		text-align: right;
+	}
+
+	.boring-label {
+		display: block;
+		font-size: clamp(1rem, 1.3vw, 1.2rem);
+		font-weight: 500;
+		color: #FDFF96;
+		margin-bottom: 0.5rem;
+		text-transform: lowercase;
+	}
+
+	.boring-stuff p {
+		font-size: clamp(0.9rem, 1.1vw, 1rem);
+		font-weight: 300;
+		color: #FDFF96;
+		margin: 0.25rem 0;
+	}
+
+	/* Form Section */
+	.contact-form-section {
+		background: #ffffff;
+		padding: clamp(3rem, 6vw, 6rem) 0;
+	}
+
+	.form-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		gap: clamp(2rem, 4vw, 4rem);
+		align-items: start;
+	}
+
+
+	.form-intro h2 {
+		font-size: clamp(1.8rem, 3vw, 2.5rem);
+		font-weight: 1000;
+		color: #4A5B4C;
+		margin-bottom: 1rem;
+		text-transform: lowercase;
+	}
+
+	.form-intro p {
+		font-size: clamp(1rem, 1.3vw, 1.2rem);
+		font-weight: 600;
+		color: #4A5B4C;
+	}
+
+	.contact-form {
+		background: #FDFF96;
+		padding: clamp(2rem, 4vw, 3rem);
+		border-radius: 20px;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		padding: 1rem 1.5rem;
+		border: 2px solid #4A5B4C;
+		border-radius: 12px;
+		background: #FDFF96;
+		color: #4A5B4C;
+		font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+		font-family: inherit;
+		font-weight: 400;
+		text-transform: lowercase;
+		transition: border-color 0.2s ease;
+	}
+
+	.contact-form input::placeholder,
+	.contact-form textarea::placeholder {
+		color: #4A5B4C;
+		opacity: 0.7;
+		text-transform: lowercase;
+	}
+
+	.contact-form input:focus,
+	.contact-form textarea:focus {
+		outline: none;
+		border-color: #25302b;
+	}
+
+	.contact-form textarea {
+		resize: vertical;
+		min-height: 150px;
+	}
+
+	.submit-btn {
+		width: 100%;
+		padding: 1.2rem 2rem;
+		background: #4A5B4C;
+		color: #FDFF96;
+		border: 2px solid #4A5B4C;
+		border-radius: 12px;
+		font-size: clamp(1rem, 1.2vw, 1.1rem);
+		font-weight: 600;
+		text-transform: lowercase;
+		cursor: pointer;
+		transition: filter 0.2s ease;
+	}
+
+	.submit-btn:hover {
+		filter: brightness(1.1);
+	}
+
+	/* Responsive */
+	@media (max-width: 968px) {
+		.hero-content {
+			flex-direction: column;
+		}
+
+		.boring-stuff {
+			text-align: left;
+		}
+
+		.form-wrapper {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
