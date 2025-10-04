@@ -80,6 +80,7 @@
     letter-spacing: .4px;
     color: #4A5B4C; /* deep green/grey */
     text-decoration: none;
+    font-family: 'Outfit', sans-serif;
   }
 
   /* Centered pill nav */
@@ -98,6 +99,7 @@
     font-weight: 400;
     color: #4A5B4C;
     text-decoration: none;
+    font-family: 'Outfit', sans-serif;
   }
   .navpill a:hover { color: #25302b; }
 
@@ -114,6 +116,7 @@
     font-size: clamp(0.9rem, 1.2vw, 1.2rem);
     font-weight: 700;
     border: 2px solid #4A5B4C;
+    font-family: 'Outfit', sans-serif;
   }
   .cta:hover { filter: brightness(1.05); }
 

@@ -12,7 +12,7 @@
 <main class="contact-page">
 	<!-- Hero Section -->
 	<section class="contact-hero">
-		<div class="container">
+		<div class="container-hero">
 			<h1>kennismaken?</h1>
 			<p class="subtitle">leuk! neem contact op en we plannen een gesprek.</p>
 
@@ -41,7 +41,7 @@
 
 	<!-- Form Section -->
 	<section class="contact-form-section">
-		<div class="container">
+		<div class="container-form">
 			<div class="form-wrapper">
 				<div class="form-intro">
 					<h2>of stuur een bericht via het formulier</h2>
@@ -77,11 +77,16 @@
 		background: #4A5B4C;
 	}
 
-	.container {
+    .container-hero {
 		width: 100%;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 0 clamp(10px, 2vw, 20px);
+	}
+
+	.container-form {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
 	}
 
 	/* Hero Section */
@@ -195,6 +200,8 @@
 		background: #FDFF96;
 		padding: clamp(2rem, 4vw, 3rem);
 		border-radius: 20px;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.form-row {
@@ -221,6 +228,7 @@
 		font-weight: 400;
 		text-transform: lowercase;
 		transition: border-color 0.2s ease;
+		box-sizing: border-box;
 	}
 
 	.contact-form input::placeholder,
@@ -281,39 +289,95 @@
 	}
 
 	@media (max-width: 480px) {
+        .container-hero {
+            padding: 0 1rem;
+        }
+
 		.contact-hero {
 			padding: 2.5rem 0 2rem;
 		}
 
 		.contact-hero h1 {
 			font-size: 2rem;
+			margin-bottom: 0.75rem;
 		}
 
 		.subtitle {
 			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.hero-content {
+			gap: 2rem;
+		}
+
+		.contact-info {
+			gap: 1.25rem;
+		}
+
+		.info-item .label {
+			font-size: 0.9rem;
+		}
+
+		.info-item .value {
+			font-size: 1rem;
+		}
+
+		.boring-stuff p {
+			font-size: 0.85rem;
+		}
+
+		.contact-form-section {
+			padding: 2.5rem 0;
+		}
+
+		.form-wrapper {
+			gap: 2rem;
+		}
+
+		.form-intro {
+			margin-bottom: 0.5rem;
+            padding: 0 1rem;
+		}
+
+		.form-intro h2 {
+			font-size: 1.5rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.form-intro p {
+			font-size: 0.95rem;
 		}
 
 		.contact-form {
-			padding: 1.5rem;
+			padding: 1rem;
+			border-radius: 16px;
+		}
+
+		.form-row {
+			gap: 0.875rem;
+			margin-bottom: 0.875rem;
+		}
+
+		.form-group {
+			margin-bottom: 1.25rem;
 		}
 
 		.contact-form input,
 		.contact-form textarea {
-			padding: 0.875rem 1.25rem;
+			padding: 0.75rem 1rem;
 			font-size: 1rem;
+			border-radius: 10px;
+		}
+
+		.contact-form textarea {
+			min-height: 120px;
 		}
 
 		.submit-btn {
 			padding: 1rem 1.5rem;
 			font-size: 0.95rem;
-		}
-
-		.form-intro h2 {
-			font-size: 1.5rem;
-		}
-
-		.form-intro p {
-			font-size: 0.95rem;
+			border-radius: 10px;
 		}
 	}
 </style>
