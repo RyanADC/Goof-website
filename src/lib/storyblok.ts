@@ -1,4 +1,5 @@
 import { apiPlugin, storyblokInit, StoryblokComponent, useStoryblokApi } from '@storyblok/svelte';
+import { PUBLIC_STORYBLOK_ACCESS_TOKEN } from '$env/static/public';
 
 // <<< vervang deze imports door jouw echte blokcomponenten zodra je ze hebt >>>
 import Page from '$lib/components/bloks/Page.svelte';
@@ -9,7 +10,7 @@ import ProjectList from '$lib/components/bloks/ProjectListHero.svelte';
 import OverGoof from '$lib/components/bloks/OverGoof.svelte';
 
 storyblokInit({
-  accessToken: import.meta.env.PUBLIC_STORYBLOK_ACCESS_TOKEN,
+  accessToken: PUBLIC_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: {
     page: Page,
@@ -18,7 +19,7 @@ storyblokInit({
     grid: Grid,
     projectList: ProjectList,
     overGoof: OverGoof
-    // <<< voeg hier jouw eigen blokcomponenten toe zodra je ze hebt >>>
+    // <<< voeg hier jouw eigen blokcomponenten toe zodra je je hebt >>>
   }
 });
 
