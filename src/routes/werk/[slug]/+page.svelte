@@ -337,4 +337,40 @@
 			grid-template-columns: 1fr;
 		}
 	}
+
+	@media (max-width: 480px) {
+		.project-hero {
+			padding: 2rem 0 1.5rem;
+		}
+
+		.project-hero h1 {
+			font-size: 2rem;
+		}
+
+		.info-box {
+			padding: 1.5rem;
+			gap: 1.5rem;
+		}
+
+		.info-main h2 {
+			font-size: 1.25rem;
+		}
+
+		.info-main p {
+			font-size: 0.9rem;
+		}
+
+		.tag {
+			padding: 0.5rem 1rem;
+			font-size: 0.8rem;
+		}
+
+		.more-work {
+			padding: 2.5rem 0;
+		}
+
+		.more-work h2 {
+			font-size: 1.75rem;
+		}
+	}
 </style>

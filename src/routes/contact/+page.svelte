@@ -279,4 +279,41 @@
 			grid-template-columns: 1fr;
 		}
 	}
+
+	@media (max-width: 480px) {
+		.contact-hero {
+			padding: 2.5rem 0 2rem;
+		}
+
+		.contact-hero h1 {
+			font-size: 2rem;
+		}
+
+		.subtitle {
+			font-size: 1rem;
+		}
+
+		.contact-form {
+			padding: 1.5rem;
+		}
+
+		.contact-form input,
+		.contact-form textarea {
+			padding: 0.875rem 1.25rem;
+			font-size: 1rem;
+		}
+
+		.submit-btn {
+			padding: 1rem 1.5rem;
+			font-size: 0.95rem;
+		}
+
+		.form-intro h2 {
+			font-size: 1.5rem;
+		}
+
+		.form-intro p {
+			font-size: 0.95rem;
+		}
+	}
 </style>

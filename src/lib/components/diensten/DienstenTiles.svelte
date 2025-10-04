@@ -106,6 +106,25 @@
                 font-size: 1.5rem;
             }
         }
+
+        @media (max-width: 480px) {
+            .services-section {
+                padding: 30px 10px;
+            }
+
+            .service-card {
+                padding: 24px;
+            }
+
+            .service-card h2 {
+                font-size: 1.35rem;
+            }
+
+            .service-button {
+                padding: 12px 35px;
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
