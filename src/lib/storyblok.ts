@@ -9,7 +9,7 @@ import ProjectList from '$lib/components/bloks/ProjectListHero.svelte';
 import OverGoof from '$lib/components/bloks/OverGoof.svelte';
 
 storyblokInit({
-  accessToken: import.meta.env.VITE_STORYBLOK_TOKEN ?? import.meta.env.STORYBLOK_TOKEN,
+  accessToken: import.meta.env.PUBLIC_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: {
     page: Page,
