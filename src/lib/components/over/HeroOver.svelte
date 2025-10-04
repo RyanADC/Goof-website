@@ -60,7 +60,7 @@
     justify-self: end;
     font-weight: 500;
     color: #2f3a34;
-    font-size: 80px;
+    font-size: clamp(2rem, 10vw, 80px);
     line-height: 1.05;
     width: min(100%, 1100px);
     text-align: right;

@@ -124,6 +124,7 @@
         @media (max-width: 768px) {
             .workflow-section {
                 padding: 40px 20px;
+                margin: 0 20px;
             }
 
             .workflow-header h1 {
@@ -136,6 +137,29 @@
 
             .workflow-card h2 {
                 font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .workflow-section {
+                padding: 30px 15px;
+                margin: 0 10px;
+            }
+
+            .workflow-header h1 {
+                font-size: 2rem;
+            }
+
+            .workflow-card {
+                padding: 24px;
+            }
+
+            .workflow-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .workflow-card p {
+                font-size: 0.95rem;
             }
         }
     </style>

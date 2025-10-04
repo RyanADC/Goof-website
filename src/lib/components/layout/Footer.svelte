@@ -191,6 +191,26 @@
                 gap: 30px;
             }
         }
+
+        @media (max-width: 480px) {
+            .footer-text {
+                padding: 20px 20px;
+            }
+
+            .contact-section {
+                margin: 20px 10px 0 10px;
+                padding: 30px 20px;
+            }
+
+            .contact-button {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+
+            .contact-left h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
