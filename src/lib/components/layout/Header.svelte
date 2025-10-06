@@ -179,6 +179,7 @@
     font-weight: 500;
     text-transform: lowercase;
     padding: 0.5rem 0;
+    font-family: 'Outfit', sans-serif;
   }
 
   .mobile-nav a:hover {
