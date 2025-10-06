@@ -21,7 +21,11 @@
 					<a class="card proj" href="/werk/{project.slug}" aria-label={project.name}>
 						<figure class="proj__media">
 							{#if project.content?.hoofdAfbeelding?.filename}
-								<img src={project.content.hoofdAfbeelding.filename} alt={project.name} loading="lazy" />
+								<img
+									src={project.content.hoofdAfbeelding.filename}
+									alt={project.name}
+									loading="lazy"
+								/>
 							{:else}
 								<div class="proj__ph"></div>
 							{/if}
@@ -41,7 +45,7 @@
 <style>
 	.projects-page {
 		padding: clamp(2rem, 6vw, 4rem) 0;
-		background: linear-gradient(to bottom, #FDFF96 0%, #FDFF96 10%, transparent 20%);
+		background: linear-gradient(to bottom, #fdff96 0%, #fdff96 10%, transparent 20%);
 		overflow-x: hidden;
 		min-height: 60vh;
 		max-width: 100vw;
@@ -56,7 +60,7 @@
 	}
 
 	h1 {
-		color: #4A5B4C;
+		color: #4a5b4c;
 		font-size: clamp(3rem, 6vw, 5rem);
 		font-weight: 500;
 		margin-bottom: clamp(2rem, 4vw, 3rem);
@@ -133,8 +137,8 @@
 		margin: 0;
 		font-size: clamp(1.2rem, 2vw, 1.5rem);
 		font-weight: 700;
-		color: #4A5B4C;
-		background: #FDFF96;
+		color: #4a5b4c;
+		background: #fdff96;
 		padding: 0.5rem 1.25rem;
 		border-radius: 50px;
 		display: inline-block;

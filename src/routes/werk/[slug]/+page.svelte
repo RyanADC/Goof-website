@@ -271,7 +271,7 @@
 
 	/* Project Images Grid */
 	.project-images {
-		padding: clamp(2rem, 4vw, 3rem) 0;
+		padding: 0 0 clamp(2rem, 4vw, 3rem) 0;
 		overflow-x: hidden;
 	}
 
