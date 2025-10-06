@@ -243,7 +243,7 @@
 
 	.meta-item .value {
 		color: #fdff96;
-		font-size: clamp(1rem, 1.8vw, 1.4rem);
+		font-size: clamp(0.9rem, 1.2vw, 1rem);
 		line-height: 1;
 		padding-top: 8px;
 	}
