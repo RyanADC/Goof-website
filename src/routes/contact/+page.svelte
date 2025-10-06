@@ -75,6 +75,7 @@
 <style>
 	.contact-page {
 		background: #4a5b4c;
+		font-family: 'Outfit', sans-serif;
 	}
 
 	.container-hero {

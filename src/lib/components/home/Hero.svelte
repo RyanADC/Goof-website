@@ -15,7 +15,6 @@
     <div class="hero__copy">
       <p class="lead">{subtitle}</p>
     </div>
-
     <div class="hero__headline" aria-label={lines.join(' ')}>
       {#each lines as line, i}
         <span class="step" style={`--i:${i}; --step:${STEP};`}>
@@ -23,15 +22,21 @@
         </span>
       {/each}
     </div>
+
+    <a href="#werk" class="mobile-cta">
+      Bekijk onze laatste projecten
+      <span class="arrow">↓</span>
+    </a>
   </div>
 </section>
 
 <style>
   .hero {
     width: 100%;
-    min-height: 50vh;
+    min-height: 40vh;
     overflow-x: hidden;
     background: #FDFF96;
+    font-family: 'Outfit', sans-serif;
   }
 
   .hero__grid {
@@ -49,7 +54,7 @@
   .lead {
     max-width: 56ch;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 1.8;
     color: #4A5B4C;
     margin: 0;
@@ -71,7 +76,11 @@
     position: relative;
     background: #E0B20A;
     margin-left: calc(var(--i) * var(--step));
-    padding: 0.12em 0.25em;
+    padding: 0.12em 0.1em;
+  }
+
+  .mobile-cta {
+    display: none;
   }
 
   :root { --step: 4.2vw; }
@@ -84,6 +93,26 @@
     .hero__headline{
       justify-self: start;
       text-align: left;
+    }
+    .hero__copy {
+      display: none;
+    }
+    .mobile-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 18px;
+      font-weight: 500;
+      color: #2f3a34;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .mobile-cta:hover {
+      transform: translateY(2px);
+    }
+    .arrow {
+      font-size: 22px;
+      animation: bounce 2s infinite;
     }
   }
 
@@ -99,6 +128,15 @@
   @media (max-width: 480px) {
     .hero__grid {
       padding-inline: 1rem;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(4px);
     }
   }
 </style>

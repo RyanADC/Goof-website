@@ -25,10 +25,10 @@
 	</section>
 
 	<!-- Cover Image -->
-	{#if project.cover?.filename}
+	{#if project.hoofdAfbeelding?.filename}
 		<div class="project-cover">
 			<div class="container-full">
-				<img src={project.cover.filename} alt={story.name} />
+				<img src={project.hoofdAfbeelding.filename} alt={story.name} />
 			</div>
 		</div>
 	{/if}
@@ -39,8 +39,8 @@
 			<div class="info-box">
 				<div class="info-main">
 					<h2>{project.projectTitel || 'lorem ipsum dolor sit amet'}</h2>
-					{#if project.projectBeschrijving || project.intro}
-						<p>{project.projectBeschrijving || project.intro}</p>
+					{#if project.projectBeschrijving}
+						<p>{project.projectBeschrijving}</p>
 					{/if}
 				</div>
 
@@ -79,10 +79,18 @@
 			<div class="container">
 				<div class="images-grid">
 					{#if project.afbeelding1?.filename}
-						<img src={project.afbeelding1.filename} alt={project.afbeelding1.alt || story.name} loading="lazy" />
+						<img
+							src={project.afbeelding1.filename}
+							alt={project.afbeelding1.alt || story.name}
+							loading="lazy"
+						/>
 					{/if}
 					{#if project.afbeelding2?.filename}
-						<img src={project.afbeelding2.filename} alt={project.afbeelding2.alt || story.name} loading="lazy" />
+						<img
+							src={project.afbeelding2.filename}
+							alt={project.afbeelding2.alt || story.name}
+							loading="lazy"
+						/>
 					{/if}
 				</div>
 			</div>
@@ -108,8 +116,8 @@
 		<div class="work-grid">
 			{#each moreProjects.slice(0, 3) as otherProject}
 				<a href="/werk/{otherProject.slug}" class="work-card">
-					{#if otherProject.content?.cover?.filename}
-						<img src={otherProject.content.cover.filename} alt={otherProject.name} loading="lazy" />
+					{#if otherProject.content?.hoofdAfbeelding?.filename}
+						<img src={otherProject.content.hoofdAfbeelding.filename} alt={otherProject.name} loading="lazy" />
 					{:else}
 						<div class="placeholder"></div>
 					{/if}
@@ -142,12 +150,12 @@
 
 	/* Hero Section */
 	.project-hero {
-		background: #FDFF96;
+		background: #fdff96;
 		padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
 	}
 
 	.project-hero h1 {
-		color: #4A5B4C;
+		color: #4a5b4c;
 		font-size: clamp(2.5rem, 5vw, 4rem);
 		font-weight: 500;
 		line-height: 1.2;
@@ -156,7 +164,7 @@
 
 	/* Cover Image */
 	.project-cover {
-		background: #FDFF96;
+		background: #fdff96;
 		padding-bottom: clamp(2rem, 4vw, 4rem);
 	}
 
@@ -175,25 +183,26 @@
 	}
 
 	.info-box {
-		background: #4A5B4C;
+		background: #4a5b4c;
 		border-radius: 20px;
 		padding: clamp(2rem, 4vw, 3rem);
 		display: grid;
 		grid-template-columns: 2fr 1fr 0.5fr;
 		gap: clamp(2rem, 4vw, 4rem);
-		align-items: start;
+		align-items: flex-start;
 	}
 
 	.info-main h2 {
-		color: #FDFF96;
+		color: #fdff96;
 		font-size: clamp(1.5rem, 2.5vw, 2rem);
 		font-weight: 700;
-		margin-bottom: 1rem;
+		margin: 0 0 1rem 0;
 		text-transform: lowercase;
+		line-height: 1;
 	}
 
 	.info-main p {
-		color: #FDFF96;
+		color: #fdff96;
 		font-size: clamp(0.9rem, 1.2vw, 1rem);
 		font-weight: 300;
 		line-height: 1.7;
@@ -213,15 +222,17 @@
 	}
 
 	.meta-item .label {
-		color: #FDFF96;
-		font-size: clamp(0.85rem, 1vw, 0.95rem);
+		color: #fdff96;
+		font-size: clamp(1rem, 1.8vw, 1.4rem);
 		font-weight: 600;
+		line-height: 1;
 	}
 
 	.meta-item .value {
-		color: #FDFF96;
-		font-size: clamp(0.9rem, 1.1vw, 1rem);
-		font-weight: 500;
+		color: #fdff96;
+		font-size: clamp(1rem, 1.8vw, 1.4rem);
+		line-height: 1;
+		padding-top: 8px;
 	}
 
 	.info-tags {
@@ -233,14 +244,17 @@
 
 	.tag {
 		background: transparent;
-		border: 2px solid #FDFF96;
-		color: #FDFF96;
-		padding: 0.6rem 1.5rem;
+		border: 2px solid #fdff96;
+		color: #fdff96;
+		padding: clamp(0.6rem, 1.2vw, 1rem) clamp(1.2rem, 2vw, 2rem);
 		border-radius: 50px;
-		font-size: clamp(0.85rem, 1vw, 0.95rem);
-		font-weight: 400;
+		font-size: clamp(1rem, 1.5vw, 1.3rem);
+		font-weight: 500;
 		text-transform: lowercase;
 		white-space: nowrap;
+		line-height: 1;
+		display: inline-flex;
+		align-items: center;
 	}
 
 	/* Project Images Grid */
@@ -270,12 +284,12 @@
 
 	/* More Work Section */
 	.more-work {
-		background: #4A5B4C;
+		background: #4a5b4c;
 		padding: clamp(3rem, 6vw, 5rem) 0;
 	}
 
 	.more-work h2 {
-		color: #FDFF96;
+		color: #fdff96;
 		font-size: clamp(2rem, 4vw, 3rem);
 		font-weight: 500;
 		margin-bottom: clamp(2rem, 3vw, 3rem);

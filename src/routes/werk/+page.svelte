@@ -20,17 +20,14 @@
 				{#each projects as project}
 					<a class="card proj" href="/werk/{project.slug}" aria-label={project.name}>
 						<figure class="proj__media">
-							{#if project.content?.cover?.filename}
-								<img src={project.content.cover.filename} alt={project.name} loading="lazy" />
+							{#if project.content?.hoofdAfbeelding?.filename}
+								<img src={project.content.hoofdAfbeelding.filename} alt={project.name} loading="lazy" />
 							{:else}
 								<div class="proj__ph"></div>
 							{/if}
 						</figure>
 						<div class="proj__body">
 							<h3 class="proj__title">{project.name}</h3>
-							{#if project.content?.intro}
-								<p class="proj__intro">{project.content.intro}</p>
-							{/if}
 						</div>
 					</a>
 				{/each}
@@ -77,7 +74,7 @@
 
 	.card.proj {
 		display: block;
-		background: #efe9e6;
+		position: relative;
 		border-radius: 18px;
 		text-decoration: none;
 		color: inherit;
@@ -94,6 +91,8 @@
 
 	.proj__media {
 		margin: 0;
+		position: relative;
+		width: 100%;
 	}
 	.proj__media img,
 	.proj__ph {
@@ -107,12 +106,19 @@
 	}
 
 	.proj__body {
-		padding: 1.5rem;
+		position: absolute;
+		bottom: 1.5rem;
+		left: 1.5rem;
 	}
 	.proj__title {
-		margin: 0.25rem 0 0.35rem;
+		margin: 0;
 		font-size: clamp(1.2rem, 2vw, 1.5rem);
-		font-weight: 500;
+		font-weight: 700;
+		color: #4A5B4C;
+		background: #FDFF96;
+		padding: 0.5rem 1.25rem;
+		border-radius: 50px;
+		display: inline-block;
 	}
 	.proj__intro {
 		margin: 0;

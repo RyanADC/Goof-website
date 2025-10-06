@@ -32,6 +32,7 @@
     min-height: 70vh;
     overflow-x: hidden;
     background: #FDFF96;
+    font-family: 'Outfit', sans-serif;
   }
 
   .hero__grid {
@@ -49,7 +50,7 @@
   .lead {
     max-width: 56ch;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 1.8;
     color: #4A5B4C;
     margin: 0;
@@ -77,6 +78,9 @@
   :root { --step: 4.2vw; }
   @media (max-width: 1024px) {
     :root { --step: 7vw; }
+    .hero {
+        min-height: 60vh;
+    }
     .hero__grid{
       grid-template-columns: 1fr;
       padding-top: 4vh;
@@ -86,8 +90,14 @@
       text-align: left;
     }
   }
+  
 
   @media (max-width: 768px) {
+    
+    .hero {
+        min-height: 55vh;
+    }
+
     .hero__grid {
       gap: 1.5rem;
     }

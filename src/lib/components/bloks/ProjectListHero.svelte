@@ -62,17 +62,14 @@
 				{#each projects as p}
 					<a class="card proj" href={'/werk/' + p.slug} aria-label={p.name}>
 						<figure class="proj__media">
-							{#if p.content?.cover?.filename}
-								<img src={p.content.cover.filename} alt={p.name} />
+							{#if p.content?.hoofdAfbeelding?.filename}
+								<img src={p.content.hoofdAfbeelding.filename} alt={p.name} />
 							{:else}
 								<div class="proj__ph"></div>
 							{/if}
 						</figure>
 						<div class="proj__body">
 							<h3 class="proj__title">{p.name}</h3>
-							{#if p.content?.intro}
-								<p class="proj__intro">{p.content.intro}</p>
-							{/if}
 						</div>
 					</a>
 				{/each}
@@ -86,6 +83,7 @@
 		padding: clamp(2rem, 8vw, 8rem) 0;
 		background: linear-gradient(to bottom, #FDFF96 0%, #FDFF96 10%, transparent 20%);
 		overflow-x: hidden;
+		font-family: 'Outfit', sans-serif;
 	}
 
 	.grid {
@@ -107,7 +105,7 @@
 
 	.card.proj {
 		display: block;
-		background: #efe9e6; /* zachte kaartkleur zoals je voorbeeld */
+		position: relative;
 		border-radius: 18px;
 		text-decoration: none;
 		color: inherit;
@@ -124,6 +122,8 @@
 
 	.proj__media {
 		margin: 0;
+		position: relative;
+		width: 100%;
 	}
 	.proj__media img,
 	.proj__ph {
@@ -137,12 +137,19 @@
 	}
 
 	.proj__body {
-		padding: 1.5rem;
+		position: absolute;
+		bottom: 1.5rem;
+		left: 1.5rem;
 	}
 	.proj__title {
-		margin: 0.25rem 0 0.35rem;
+		margin: 0;
 		font-size: clamp(1.2rem, 2vw, 1.5rem);
-		font-weight: 500;
+		font-weight: 700;
+		color: #4A5B4C;
+		background: #FDFF96;
+		padding: 0.5rem 1.25rem;
+		border-radius: 50px;
+		display: inline-block;
 	}
 	.proj__intro {
 		margin: 0;

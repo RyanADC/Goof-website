@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Outfit', sans-serif;
             background-color: #f5f5f5;
         }
 
@@ -30,7 +30,7 @@
             color: #FDFF96;
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 80px;
+            margin-bottom: 20px;
             text-align: left;
         }
 
