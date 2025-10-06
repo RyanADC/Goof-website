@@ -6,14 +6,14 @@ export async function load({ params }) {
 
   try {
     // Fetch the current project
-    const { data } = await storyblokApi.get(`cdn/stories/projects/${params.slug}`, {
+    const { data } = await storyblokApi.get(`cdn/stories/werk/${params.slug}`, {
       version: 'published',
       resolve_links: 'url'
     });
 
     // Fetch other projects for "meer werk" section
     const { data: projectsData } = await storyblokApi.get('cdn/stories', {
-      starts_with: 'projects/',
+      starts_with: 'werk/',
       version: 'published',
       per_page: 100,
       excluding_slugs: params.slug

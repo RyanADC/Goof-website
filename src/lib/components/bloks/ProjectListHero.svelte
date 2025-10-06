@@ -26,7 +26,7 @@
 		try {
 			const api = useStoryblokApi();
 			const { data } = await api.get('cdn/stories', {
-				starts_with: 'projects/',
+				starts_with: 'werk/',
 				// Temporarily remove content_type filter to avoid mismatches during setup
 				// content_type: 'project',
 				version: isDraft ? 'draft' : 'published',
@@ -36,7 +36,7 @@
 			projects = data.stories;
 			if (!projects || projects.length === 0) {
 				error =
-					'Geen projecten gevonden. Controleer dat de folder "projects" heet, de stories gepubliceerd zijn, en (optioneel) het content type "project" is.';
+					'Geen projecten gevonden. Controleer dat de folder "werk" heet, de stories gepubliceerd zijn, en (optioneel) het content type "project" is.';
 			}
 			clearTimeout(timeout);
 		} catch (e) {

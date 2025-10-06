@@ -5,7 +5,7 @@ export async function load() {
 
   try {
     const { data } = await storyblokApi.get('cdn/stories', {
-      starts_with: 'projects/',
+      starts_with: 'werk/',
       version: 'published',
       per_page: 100,
       sort_by: 'first_published_at:desc'
