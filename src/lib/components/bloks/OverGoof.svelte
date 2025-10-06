@@ -35,7 +35,7 @@
 
 <style>
   .about-section {
-    padding: 80px 40px;
+    padding: 80px 10px;
     max-width: 1400px;
     margin: 0 auto;
     font-family: 'Outfit', sans-serif;

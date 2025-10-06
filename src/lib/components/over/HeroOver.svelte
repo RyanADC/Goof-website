@@ -42,7 +42,7 @@
     align-items: end;
     max-width: 1400px;
     margin: 0 auto;
-    padding-inline: clamp(10px, 2vw, 20px);
+    padding-inline: 10px;
     padding-top: clamp(6vh, 12vh, 12vh);
   }
 

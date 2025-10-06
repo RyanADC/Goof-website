@@ -55,14 +55,14 @@
 		width: 100%;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 0 clamp(10px, 2vw, 20px);
+		padding: 0 10px;
 		box-sizing: border-box;
 	}
 
 	h1 {
 		color: #4a5b4c;
 		font-size: clamp(3rem, 6vw, 5rem);
-		font-weight: 500;
+		font-weight: 400;
 		margin-bottom: clamp(2rem, 4vw, 3rem);
 		text-transform: lowercase;
 		font-family: 'Outfit', sans-serif;

@@ -144,7 +144,7 @@
 		width: 100%;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 0 clamp(10px, 2vw, 20px);
+		padding: 0 10px;
 		box-sizing: border-box;
 	}
 
@@ -152,7 +152,7 @@
 		width: 100%;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 0 clamp(10px, 2vw, 20px);
+		padding: 0 10px;
 		box-sizing: border-box;
 	}
 
@@ -373,6 +373,11 @@
 	@media (max-width: 1024px) {
 		.info-box {
 			grid-template-columns: 1fr;
+		}
+
+		.meta {
+			flex-direction: row;
+			gap: 2rem;
 		}
 
 		.info-tags {

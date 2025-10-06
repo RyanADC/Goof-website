@@ -60,7 +60,11 @@
 
 <style>
   /* Header wrapper keeps sticky behavior defined in app.css .header */
-  .header { border-bottom: none; background: #FDFF96; }
+  .header {
+    border-bottom: none;
+    background: #FDFF96;
+    padding: 0 10px;
+  }
 
   /* Yellow rounded container like the design */
   .shell {
@@ -70,7 +74,7 @@
     gap: 1rem;
     max-width: 1400px;
     margin: 0 auto;
-    padding: clamp(1rem, 2rem, 2rem) clamp(10px, 2vw, 20px) clamp(1rem, 1.5rem, 1.5rem);
+    padding: clamp(1rem, 2rem, 2rem) 0 clamp(1rem, 1.5rem, 1.5rem);
     border-radius: 28px;
   }
 

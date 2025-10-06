@@ -63,6 +63,7 @@
 	.header {
 		border-bottom: none;
 		background: #4a5b4c;
+		padding: 0 10px;
 	}
 
 	/* Dark rounded container - inverse colors */
@@ -73,7 +74,7 @@
 		gap: 1rem;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: clamp(1rem, 2rem, 2rem) clamp(10px, 2vw, 20px) clamp(1rem, 1.5rem, 1.5rem);
+		padding: clamp(1rem, 2rem, 2rem) 0 clamp(1rem, 1.5rem, 1.5rem);
 		border-radius: 28px;
 	}
 
@@ -103,7 +104,7 @@
 		background: transparent;
 	}
 	.navpill a {
-		font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+		font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 		font-weight: 400;
 		color: #fdff96;
 		text-decoration: none;
@@ -118,12 +119,12 @@
 		justify-self: end;
 		display: inline-flex;
 		align-items: center;
-		padding: 1rem 1.4rem;
+		padding: clamp(0.75rem, 1rem, 1rem) clamp(1rem, 1.4rem, 1.4rem);
 		border-radius: 9999px;
 		background: #fdff96; /* yellow pill */
 		color: #4a5b4c; /* dark text */
 		text-decoration: none;
-		font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+		font-size: clamp(0.9rem, 1.2vw, 1.2rem);
 		font-weight: 700;
 		border: 2px solid #fdff96;
 		font-family: 'Outfit', sans-serif;
