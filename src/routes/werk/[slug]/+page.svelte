@@ -270,6 +270,7 @@
 
 	.images-grid img {
 		width: 100%;
+		max-width: 100%;
 		height: auto;
 		display: block;
 		object-fit: cover;
@@ -343,6 +344,14 @@
 	}
 
 	@media (max-width: 768px) {
+		.container {
+			padding: 0 1rem;
+		}
+
+		.container-full {
+			padding: 0 1rem;
+		}
+
 		.images-grid {
 			grid-template-columns: 1fr;
 		}
@@ -350,9 +359,25 @@
 		.work-grid {
 			grid-template-columns: 1fr;
 		}
+
+		.project-cover img {
+			border-radius: 12px;
+		}
+
+		.images-grid img {
+			border-radius: 12px;
+		}
 	}
 
 	@media (max-width: 480px) {
+		.container {
+			padding: 0 0.75rem;
+		}
+
+		.container-full {
+			padding: 0 0.75rem;
+		}
+
 		.project-hero {
 			padding: 2rem 0 1.5rem;
 		}
@@ -361,9 +386,15 @@
 			font-size: 2rem;
 		}
 
+		.project-cover img {
+			border-radius: 8px;
+			max-height: 300px;
+		}
+
 		.info-box {
 			padding: 1.5rem;
 			gap: 1.5rem;
+			border-radius: 12px;
 		}
 
 		.info-main h2 {
@@ -379,12 +410,24 @@
 			font-size: 0.8rem;
 		}
 
+		.images-grid {
+			gap: 0.75rem;
+		}
+
+		.images-grid img {
+			border-radius: 8px;
+		}
+
 		.more-work {
 			padding: 2.5rem 0;
 		}
 
 		.more-work h2 {
 			font-size: 1.75rem;
+		}
+
+		.work-card {
+			border-radius: 12px;
 		}
 	}
 </style>
