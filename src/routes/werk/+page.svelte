@@ -44,6 +44,7 @@
 		background: linear-gradient(to bottom, #FDFF96 0%, #FDFF96 10%, transparent 20%);
 		overflow-x: hidden;
 		min-height: 60vh;
+		max-width: 100vw;
 	}
 
 	.container {
@@ -51,6 +52,7 @@
 		max-width: 1400px;
 		margin: 0 auto;
 		padding: 0 clamp(10px, 2vw, 20px);
+		box-sizing: border-box;
 	}
 
 	h1 {
@@ -60,16 +62,28 @@
 		margin-bottom: clamp(2rem, 4vw, 3rem);
 		text-transform: lowercase;
 		font-family: 'Outfit', sans-serif;
+		max-width: 100%;
 	}
 
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: clamp(1.5rem, 3vw, 2rem);
+		max-width: 100%;
 	}
 	@media (max-width: 768px) {
 		.grid {
 			grid-template-columns: 1fr;
+		}
+
+		.container {
+			padding: 0 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.container {
+			padding: 0 0.75rem;
 		}
 	}
 
@@ -84,6 +98,7 @@
 		transition:
 			transform 0.2s ease,
 			box-shadow 0.2s ease;
+		max-width: 100%;
 	}
 	.card.proj:hover {
 		transform: scale(1.02);
@@ -94,13 +109,16 @@
 		margin: 0;
 		position: relative;
 		width: 100%;
+		max-width: 100%;
 	}
 	.proj__media img,
 	.proj__ph {
 		width: 100%;
+		max-width: 100%;
 		aspect-ratio: 16/9;
 		object-fit: cover;
 		display: block;
+		box-sizing: border-box;
 	}
 	.proj__ph {
 		background: #ece7e4;
