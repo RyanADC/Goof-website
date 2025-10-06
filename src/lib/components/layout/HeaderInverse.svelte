@@ -23,7 +23,9 @@
 
 <header class="header">
 	<div class="shell">
-		<a href="/" class="brand" aria-label="Goof">goof</a>
+		<a href="/" class="brand" aria-label="Goof">
+			<img src="/logo/goof-logo-geel.png" alt="Goof" class="logo" />
+		</a>
 
 		<nav class="navpill" aria-label="Primary">
 			<a href="/werk">werk</a>
@@ -78,12 +80,15 @@
 	/* Brand */
 	.brand {
 		justify-self: start;
-		font-size: clamp(1.8rem, 2.8vw, 2.6rem);
-		font-weight: 700;
-		letter-spacing: 0.4px;
-		color: #fdff96; /* yellow text */
 		text-decoration: none;
-		font-family: 'Outfit', sans-serif;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		height: clamp(40px, 5vw, 60px);
+		width: auto;
+		display: block;
 	}
 
 	/* Centered pill nav */
@@ -222,8 +227,8 @@
 			padding: 1rem clamp(10px, 2vw, 20px);
 		}
 
-		.brand {
-			font-size: 1.8rem;
+		.logo {
+			height: 35px;
 		}
 
 		.navpill,

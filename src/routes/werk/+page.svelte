@@ -59,6 +59,7 @@
 		font-weight: 500;
 		margin-bottom: clamp(2rem, 4vw, 3rem);
 		text-transform: lowercase;
+		font-family: 'Outfit', sans-serif;
 	}
 
 	.grid {
@@ -119,6 +120,7 @@
 		padding: 0.5rem 1.25rem;
 		border-radius: 50px;
 		display: inline-block;
+		font-family: 'Outfit', sans-serif;
 	}
 	.proj__intro {
 		margin: 0;
