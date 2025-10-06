@@ -122,11 +122,6 @@
 		display: inline-block;
 		font-family: 'Outfit', sans-serif;
 	}
-	.proj__intro {
-		margin: 0;
-		opacity: 0.8;
-		font-size: clamp(0.9rem, 1.2vw, 1rem);
-	}
 
 	.error {
 		color: tomato;

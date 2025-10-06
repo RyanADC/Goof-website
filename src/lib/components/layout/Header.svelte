@@ -46,7 +46,7 @@
 
     <!-- Mobile menu -->
     {#if menuOpen}
-      <div class="mobile-menu" on:click={closeMenu}>
+      <div class="mobile-menu" on:click={closeMenu} on:keydown={(e) => e.key === 'Enter' && closeMenu()} role="button" tabindex="0">
         <nav class="mobile-nav">
           <a href="/werk" on:click={closeMenu}>werk</a>
           <a href="/diensten" on:click={closeMenu}>diensten</a>
